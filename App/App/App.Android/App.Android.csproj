@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C80F36CA-724C-4CE3-BE43-D0359CAFCB28}</ProjectGuid>
+    <ProjectGuid>{8491997E-AC35-48D5-9DCF-8F1A1CCDA668}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
@@ -57,8 +57,9 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioService.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,15 +74,15 @@
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
@@ -92,31 +93,55 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App\App.csproj">
-      <Project>{EC8A78E0-2C3E-459F-8FEE-F13F3B5D1D71}</Project>
+      <Project>{54BE2882-8C22-4A1B-8E0F-6F32F93C8726}</Project>
       <Name>App</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\SoundsScreen.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
+    <AndroidAsset Include="Resources\drawable\down_arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\share.png" />
+    <AndroidAsset Include="Resources\drawable\flextape_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\up_arrow.png" />
+    <AndroidAsset Include="Resources\drawable\share.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\SoundModificationPanel.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
+    <AndroidAsset Include="Resources\drawable\up_arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\down_arrow.png" />
+    <AndroidAsset Include="Resources\drawable\buttonshare.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\flextape_logo.png" />
+    <AndroidAsset Include="Assets\2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\5.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\6.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\9.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\4.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\8.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\1.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\7.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\3.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

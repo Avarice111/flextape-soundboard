@@ -4,5 +4,19 @@
              x:Class="App.App">
     <Application.Resources>
 
+        <Style x:Key="SoundList" TargetType="ListView">
+            <Setter Property="SeparatorVisibility" Value="None"/>
+            <Setter Property="BackgroundColor" Value="#262626"/>
+            
+        </Style>
+
+        <Style x:Key="SoundButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#ffc03e33"/>
+            <Setter Property="HeightRequest" Value="200"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="TextColor" Value="#ffffff"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        </Style>
+
     </Application.Resources>
 </Application>
