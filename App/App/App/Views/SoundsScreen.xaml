@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
+             x:Class="App.Views.SoundsScreen">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="SoundButtonsListView"
+                       SeparatorVisibility="None"
+                       BackgroundColor="#262626"
+                       Margin="10, 0, 0, 0" 
+                       SelectionMode="None"
+                       ItemsSource="{Binding SoundButtons}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"
+                                    Margin="15, 10, 0, 0"
+                                    HeightRequest="100"
+                                    HorizontalOptions="FillAndExpand">
+                                <Button ClassId="{Binding id}"
+                                    Text="{Binding text}"
+                                    Style="{StaticResource SoundButton}"
+                                    Clicked="ButtonClick" />
+                                <local:CircleButton 
+                                    BackgroundColor="#ffc03e33"
+                                    WidthRequest="100"
+                                    HeightRequest="100"
+                                    TextColor="#ffffff"
+                                    Margin="15, 0, 15, 0"
+                                    FontIcon="FontAwesome"
+                                    Icon="fa-share-alt">
+                                </local:CircleButton>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
